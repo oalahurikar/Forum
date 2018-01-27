@@ -1,0 +1,17 @@
+	1. User ,  -Devise
+	• Email: string
+	• passwordl: string
+has_many :forum_threads
+has_many :forum_post
+	
+  2.  Forum Thread
+	• User_id: integer
+	• Subject: text
+belongs_to :user
+has_many :forum_posts
+	3. ForumPost
+	• Forum_thread_id: integer
+	• User_id: integer
+	• Body: text
+belongs_to :forum_thread
+belongs_to :user
